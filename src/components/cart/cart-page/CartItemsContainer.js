@@ -106,7 +106,7 @@ const CartItemsContainer = () => {
 	}
 
 	return (
-		<div className="cart product-cart-container container mx-auto my-32 px-4 xl:px-0">
+        <div className="cart product-cart-container container mx-auto my-32 px-4 xl:px-0">
 			{ cart ? (
 				<div className="woo-next-cart-wrapper container">
 					<div className="cart-header grid grid-cols-2 gap-4">
@@ -165,7 +165,7 @@ const CartItemsContainer = () => {
 									</tr> */}
 									</tbody>
 								</table>
-								<Link href="/checkout">
+								<Link href="/checkout" legacyBehavior>
 									<button className="bg-purple-600 text-white px-5 py-3 rounded-sm w-auto xl:w-full">
 										<span className="woo-next-cart-checkout-txt">Proceed to Checkout</span>
 										<i className="fas fa-long-arrow-alt-right"/>
@@ -181,7 +181,7 @@ const CartItemsContainer = () => {
 			) : (
 				<div className="container mx-auto my-32 px-4 xl:px-0">
 					<h2 className="text-2xl mb-5">No items in the cart</h2>
-					<Link href="/">
+					<Link href="/" legacyBehavior>
 						<button className="bg-purple-600 text-white px-5 py-3 rounded-sm">
 							<span className="woo-next-cart-checkout-txt">Add New Products</span>
 							<i className="fas fa-long-arrow-alt-right"/>
@@ -190,8 +190,7 @@ const CartItemsContainer = () => {
 				</div>
 			) }
 		</div>
-
-	);
+    );
 };
 
 export default CartItemsContainer;
